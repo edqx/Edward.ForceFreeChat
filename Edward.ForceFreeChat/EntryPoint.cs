@@ -16,15 +16,6 @@ namespace Edward.ForceFreeChat
 
         public Harmony Harmony { get; } = new Harmony(Id);
 
-        public ConfigEntry<string> Name { get; private set; }
-
-        public override void Load()
-        {
-            Name = Config.Bind("Fake", "Name", ":>");
-
-            Harmony.PatchAll();
-        }
-
         [HarmonyPatch(typeof(SaveManager), nameof(SaveManager.ChatModeType), MethodType.Setter)]
         public static class ChatModePatch
         {

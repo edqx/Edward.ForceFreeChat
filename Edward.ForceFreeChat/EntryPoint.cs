@@ -10,7 +10,7 @@ namespace Edward.ForceFreeChat
     [BepInPlugin(Id)]
     [BepInProcess("Among Us.exe")]
     [BepInDependency(ReactorPlugin.Id)]
-    public class TemplatePlugin : BasePlugin
+    public class ForceFreeChatPlugin : BasePlugin
     {
         public const string Id = "dev.weakeyes.forcefreechat";
 
